@@ -1,0 +1,282 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+  main{
+    background: url('assets/background.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #0e0e0e;
+
+  }
+
+  .logo{
+    flex-direction: row;
+    
+  }
+
+  .logo-img{
+    width: 150px;
+    margin-left: 50px;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 40px;
+    background-color: #0e0e0e;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .user-icon {
+    background-color: #5c5c5c;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50%;
+  }
+  
+  /* Hero Section Styles */
+  .hero {
+    text-align: center;
+    flex-direction: column;
+    
+  }
+  
+  .hero h1 {
+    font-size: 130px;
+    padding-top: 150px;
+  }
+  
+  .subtitle {
+    font-size: 30px;
+  }
+
+  .subsubtitle{
+    font-size: 20px;
+    padding-left: 500px;
+    padding-top: 20px;
+  }
+
+  .register-btn {
+    margin-top: 100px;
+    padding: 15px 50px;
+    margin-bottom: 450px;
+    background-color: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .register-btn:hover {
+    background-color: #ff0066;
+  }
+  
+  /* Illustrations Section */
+  .illustrations {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+  }
+  
+  .illustration img {
+    max-width: 250px; /* Maximum width of the image */
+    height: auto;     /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures images are fully visible */
+    border-radius: 5px;  /* Optional: Rounded corners for aesthetic */
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0e0e0e;
+    font-size: 14px;
+  }
+  
+  /* About Section */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #0e0e0e; /* Matches the previous black background */
+    padding: 50px 20px;
+    color: #fff;
+    width: 100%;
+  }
+  
+  /* About Container: 3-Column Layout */
+  .about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Left, Middle, and Right Columns */
+    gap: 20px; /* Space between columns */
+    width: 100%;
+  }
+  
+  /* About Images (Left and Right Columns) */
+  .about-images {
+    display: grid;
+    grid-template-rows: 1fr 1fr; /* Two rows for images */
+    gap: 20px;
+  }
+  
+  .about-image {
+    width: 100%;
+    height: auto;
+    margin: 0px 20px 0 0;
+    max-height: 400px; /* Ensures images don’t get too large */
+    object-fit: contain; /* Keeps aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+  }
+  
+  /* About Content (Middle Column) */
+  .about-content {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about-section h2 {
+    font-size: 100px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    margin-left: 140px;
+  }
+  
+  .about-section .tagline {
+    font-size: 50px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    color: #d1d1d1;
+  }
+  
+  .about-section p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+  
+  .soch{
+    display: flex;
+    flex-direction: column;
+  }
+/* Soch Section */
+.soch-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1.5fr; /* Left (3 images), Middle (text), Right (1 image) */
+    gap: 20px;
+    background: #0e0e0e;
+    color: #fff;
+    padding: 40px;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .vichar-section {
+    display: grid;
+    grid-template-columns: 1.25fr 1.5fr 1.25fr; /* Left (3 images), Middle (text), Right (1 image) */
+    gap: 20px;
+    background: #0e0e0e;
+    color: #fff;
+    padding: 40px;
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  
+  /* Soch Content (Middle Column) */
+  .soch-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+  }
+  
+  .soch h3 {
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 100px;
+  }
+  
+  .soch-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+  }
+  
+  /* Soch Images (Left Column - 3 rows) */
+  .soch-images-left {
+    display: grid;
+    grid-template-rows: auto auto auto; /* 3 rows for 3 images */
+    gap: 10px;
+    margin-right: 50px;
+  }
+
+  .vichar-images-left {
+    display: grid;
+    grid-template-rows: auto auto; /* 2 rows for 2 images */
+    gap: 10px;
+    margin-right: 50px;
+  }
+  
+  .soch-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* Adjust as needed for larger images */
+    object-fit: contain; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+  }
+  
+  /* Soch Image (Right Column - 1 image) */
+  .soch-images-right {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .soch-image-right {
+    width: 100%;
+    max-height: 300px; /* Adjust as needed */
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  

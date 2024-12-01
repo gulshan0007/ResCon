@@ -1,222 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ResCon - Annual Research Conclave</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <nav>
-                    <div class="logo">
-                        <a href="/">
-                            ALDENAIRE &<br />
-                            PARTNERS
-                        </a>
-                    </div>
-                    <ul class="nav-links">
-                        <li><a href="/">HOME</a></li>
-                        <li><a href="/work">WORK</a></li>
-                        <li><a href="/about">ABOUT US</a></li>
-                    </ul>
-                    <div class="search-container">
-                        <input
-                            type="search"
-                            placeholder="Search..."
-                            aria-label="Search"
-                        />
-                        <button type="button" aria-label="Submit search">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            >
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="m21 21-4.3-4.3" />
-                            </svg>
-                        </button>
-                    </div>
-                    <button
-                        class="mobile-menu-toggle"
-                        aria-label="Toggle mobile menu"
-                    >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </nav>
-            </div>
-        </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResCon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo" >
+      <img class="logo-img" src="assets/iitb logo.png" alt="Logo">
+      <img class="logo-img" src="assets/enpower logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT THE EVENT</a></li>
+        <li><a href="#">SCHEDULE</a></li>
+        <li><a href="#">TEAM</a></li>
+        <li><a href="#">REGISTER NOW</a></li>
+      </ul>
+    </nav>
+    
+  </header>
 
-        <main>
-            <div class="container">
-                <section class="hero">
-                    <div class="hero-content">
-                        <h1>ResCon</h1>
-                        <p>
-                            ResCon is the Annual Research Conclave for
-                            undergraduates at IIT Bombay, organised by EnPoWER-
-                            the research promotion wing of the institute in
-                            collaboration with IRCC at TechConnect, Techfest
-                            2024.
-                        </p>
-                        <div class="cta-buttons">
-                            <button class="btn">
-                                MORE INFORMATION ABOUT THE EVENT
-                            </button>
-                            <button class="btn">GENERAL FAQS</button>
-                            <button class="btn">
-                                CONTACT DETAILS & MAP OF LOCATION
-                            </button>
-                        </div>
-                    </div>
-                    <div class="hero-logos">
-                        <img
-                            src="assets/iitb logo.png"
-                            alt="IIT Bombay Logo"
-                            width="100"
-                            height="100"
-                        />
-                        <img
-                            src="assets/enpower logo.png"
-                            alt="EnPoWER Logo"
-                            width="100"
-                            height="100"
-                        />
-                    </div>
-                </section>
+  <main>
+    <section class="hero">
+      <h1 class="title">ResCon</h1>
+      <p class="subtitle">ONE-DAY LONG PAN-INDIA RESEARCH CONCLAVE</p>
+      <p class="subsubtitle">Under TechConnect, Techfest 2024</p>
+      <button class="register-btn">REGISTER NOW!</button>
+    </section>
 
-                <section class="themes">
-                    <h2>SOCH. VICHAR. ACHAR.</h2>
+    <section class="about-section">
+        <h2 >ResCon</h2>
+        <p class="tagline">SOCH. VICHAR. ACHAR.</p>
+        <div class="about-container">
+          <!-- Left Column for Images -->
+          <div class="about-images left">
+            <img src="assets/about1.png" alt="Presentation Illustration" class="about-image" />
+            <img src="assets/about2.png" alt="Research Illustration" class="about-image" style="margin-top: 50px;"/>
+          </div>
+      
+          <!-- Middle Column for Text -->
+          <div class="about-content">
+            
+            <p style="text-align: justify; font-size: x-large;">
+              ResCon is the Annual Research Conclave for undergraduates at IIT Bombay, organised by EnPower—the research promotion wing of the institute in collaboration with IRCC at TechConnect, Techfest 2024.
+            </p>
+            <p style="text-align: justify; font-size: x-large;">
+              The conclave aims to stimulate engineering curiosity in UG students and create a platform for UG researchers to display their research work, offering a variety of exciting competitions, workshops, keynote speeches, and much more.
+            </p>
+            <p style="text-align: justify; font-size: x-large;">
+              At ResCon, the brightest minds converge to propel research forward. The event revolves around three themes: Soch, Vichar, and Achar, each fostering unique insights and collaboration.
+            </p>
+          </div>
+      
+          <!-- Right Column for Images -->
+          <div class="about-images right">
+            <img src="assets/about3.png" alt="Team Collaboration" class="about-image" />
+            <img src="assets/about4.png" alt="Data Analysis" class="about-image" />
+          </div>
+        </div>
+      </section>
+      
+      <section class="soch">
+        <h3> SOCH</h3>
+        <div  class="soch-section">
+        <!-- Left Column: 3 Images -->
+        <div class="soch-images-left">
+          <img src="assets/soch session 1.png" alt="Image 1" class="soch-image">
+          <img src="assets/soch session 3.png" alt="Image 2" class="soch-image">
+          <img src="assets/soch session 2.png" alt="Image 3" class="soch-image">
+        </div>
+      
+        <!-- Middle Column: Text -->
+        <div class="soch-content">
+            
+          <p style="font-size: x-large;">Soch features insights from leading researchers and visionary thinkers. These sessions are designed to broaden perspectives, offering participants a fresh outlook on research and its possibilities.</p>
+          <p style="font-size: x-large;">Details regarding this year’s discussions would be announced soon.</p>
+        </div>
+      
+        <!-- Right Column: 1 Image -->
+        <div class="soch-images-right">
+          <img src="assets/soch illustration.png" alt="Image 4" class="soch-image-right">
+        </div>
+    </div>
+      </section>
 
-                    <div class="theme-card">
-                        <div class="theme-content">
-                            <h3>SOCH</h3>
-                            <p>
-                                Soch features insights from leading researchers
-                                and visionary thinkers. These sessions are
-                                designed to broaden perspectives, offering
-                                participants a fresh outlook on research and its
-                                possibilities.
-                            </p>
-                            <div class="theme-images">
-                                <img
-                                    src="assets/soch session 1.png"
-                                    alt="Soch session 1"
-                                    width="200"
-                                    height="150"
-                                />
-                                <img
-                                    src="assets/soch session 2.png"
-                                    alt="Soch session 2"
-                                    width="200"
-                                    height="150"
-                                />
-                                <img
-                                    src="assets/soch session 3.png"
-                                    alt="Soch session 3"
-                                    width="200"
-                                    height="150"
-                                />
-                            </div>
-                        </div>
-                        <div class="theme-illustration">
-                            <img
-                                src="assets/soch illustration.png"
-                                alt="Soch illustration"
-                                width="400"
-                                height="300"
-                            />
-                        </div>
-                    </div>
 
-                    <div class="theme-card">
-                        <div class="theme-content">
-                            <h3>VICHAR</h3>
-                            <p>
-                                Vichar connects thought leaders from diverse
-                                fields to discuss critical topics like 'Industry
-                                and Academia' and 'AI in Research.' Interactive
-                                workshops on 'Ethics in Research' and
-                                'Entrepreneurship' deepen participants'
-                                understanding.
-                            </p>
-                            <div class="theme-images">
-                                <img
-                                    src="assets/vichar session 1.png"
-                                    alt="Vichar workshop 1"
-                                    width="200"
-                                    height="150"
-                                />
-                                <img
-                                    src="assets/vichar session 2.png"
-                                    alt="Vichar workshop 2"
-                                    width="200"
-                                    height="150"
-                                />
-                            </div>
-                        </div>
-                        <div class="theme-illustration">
-                            <img
-                                src="assets/vichar illustration.png"
-                                alt="Vichar illustration"
-                                width="400"
-                                height="300"
-                            />
-                        </div>
-                    </div>
+      <section class="soch">
+        <h3> VICHAR</h3>
+        <div  class="vichar-section">
+        <!-- Left Column: 2 Images -->
+        <div class="vichar-images-left">
+          <img src="assets/vichar session 1.png" alt="Image 1" class="soch-image">
+          <img src="assets/vichar session 2.png" alt="Image 2" class="soch-image">
+        </div>
+      
+        <!-- Middle Column: Text -->
+        <div class="soch-content">
+            
+          <p style="font-size: x-large;">Vichar connects thought leaders from diverse fields to discuss critical topics like “Industry and Academia” and “AI in Research.” Interactive workshops on “Ethics in Research” and “Entrepreneurship” deepen participants’ understanding.</p>
+          <p style="font-size: x-large;">The topics for the panel discussions and registrations for the workshop under ResCon 2024 will be released soon. </p>
+        </div>
+      
+        <!-- Right Column: 1 Image -->
+        <div class="soch-images-right">
+          <img src="assets/vichar illustration.png" alt="Image 4" class="soch-image-right">
+        </div>
+    </div>
+      </section>
 
-                    <div class="theme-card">
-                        <div class="theme-content">
-                            <h3>ACHAR</h3>
-                            <p>
-                                Achar, the highlight of ResCon, is a competitive
-                                platform for participants to present their
-                                research through compelling posters and
-                                abstracts. Events include a 3-Minute Flash Talk,
-                                Poster Presentation, and a 15-minute Research
-                                Presentation.
-                            </p>
-                            <div class="theme-images">
-                                <img
-                                    src="assets/achar session 1.png"
-                                    alt="Achar presentation 1"
-                                    width="200"
-                                    height="150"
-                                />
-                                <img
-                                    src="assets/achar session 2.png"
-                                    alt="Achar presentation 2"
-                                    width="200"
-                                    height="150"
-                                />
-                            </div>
-                        </div>
-                        <div class="theme-illustration">
-                            <img
-                                src="assets/achar illustration.png"
-                                alt="Achar illustration"
-                                width="400"
-                                height="300"
-                            />
-                        </div>
-                    </div>
-                </section>
+      <section class="soch">
+        <h3> ACHAR</h3>
+        <div  class="vichar-section">
+        <!-- Left Column: 2 Images -->
+        <div class="vichar-images-left">
+          <img src="assets/achar session 1.png" alt="Image 1" class="soch-image">
+          <img src="assets/achar session 2.png" alt="Image 2" class="soch-image">
+        </div>
+      
+        <!-- Middle Column: Text -->
+        <div class="soch-content">
+            
+          <p style="font-size: x-large;">Achar, the highlight of ResCon, is a competitive platform for participants to present their research through compelling posters and abstracts. Events include a 3-Minute Flash Talk, Poster Presentation, and a 15-minute Research Presentation, where students present their work in an engaging format to peers and experts. </p>
+          
+        </div>
+      
+        <!-- Right Column: 1 Image -->
+        <div class="soch-images-right">
+          <img src="assets/achar illustration.png" alt="Image 4" class="soch-image-right">
+        </div>
+    </div>
+      </section>
+      
+      
+      
+    
+  </main>
 
-                <section class="register">
-                    <button class="btn btn-large">REGISTER NOW!</button>
-                </section>
-            </div>
-        </main>
-
-        <script src="script.js"></script>
-    </body>
+  <footer>
+    <p>&copy; 2024 ResCon. All rights reserved.</p>
+  </footer>
+</body>
 </html>
