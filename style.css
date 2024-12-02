@@ -278,5 +278,115 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+  .schedule{
+    display: flex;
+    flex-direction: row;
+
+  }
+  .schedule-content{
+    margin:260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+  }
+  .head{
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
   
+  }
+  .i1{
+    width:170px;
+    height:170px;
+    margin:20px;
+    position:relative;
+    right:15px;
+  }
+  .team-content{
+  display:flex;
+  justify-content: center;
+  }
+  .m1{
+   text-align: center;
+  }
+  .con{
+
+    display:flex;
+    flex-direction: row;
+   padding-left:40px;
+  }
+  .m2{
+    margin:27px;
+    margin-right: 200px;
+    margin-left:400px;
+  }
+  .m3{
+    margin:30px;
+    margin-left: 100px;
+  }
+   p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  h4{
+    font-size: 1.5rem;
+    text-align: center; 
+  }
+  .map-content{
+    text-align:start;
+    margin-top: 50px;
+  }
+  .event-organizer {
+    margin-left:50px;
+    margin-top: 70px;
+    height:300px;
+    color:white;
+    background-color: black;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border:1px solid white;
+  }
+  
+  .event-organizer h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    border-bottom: 2px solid #ff0080;
+    padding-bottom: 10px;
+  }
+  
+  .event-organizer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .event-organizer li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .event-organizer li i.icon {
+    margin-right: 10px;
+    color: #ff0080;
+    font-size: 1.2rem;
+  }
+  
+  .event-organizer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .event-organizer a:hover {
+    text-decoration: underline;
+  }
+  .map{
+    display:flex;
+    flex-direction: row;
+  }
   
