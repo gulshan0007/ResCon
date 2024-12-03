@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ResCon</title>
   <link rel="stylesheet" href="style.css">
+  <!-- <script src="script.js"></script> -->
 </head>
-
 <body>
   <header class="navbar">
     <div class="logo">
@@ -16,10 +16,10 @@
     </div>
     <nav>
       <ul class="nav-links">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT THE EVENT</a></li>
-        <li><a href="#schedule">SCHEDULE</a></li>
-        <li><a href="#team">TEAM</a></li>
+        <li><a href="#index.html/#home">HOME</a></li>
+        <li><a href="about.html">ABOUT THE EVENT</a></li>
+        <li><a href="schedule.html">SCHEDULE</a></li>
+        <li><a href="team.html">TEAM</a></li>
         <li><a href="#register">REGISTER NOW</a></li>
       </ul>
     </nav>
@@ -34,420 +34,120 @@
       <button class="register-btn">REGISTER NOW!</button>
     </section>
 
-    <section class="about-section" id="about">
-      <h2>ResCon</h2>
-      <p class="tagline">SOCH. VICHAR. ACHAR.</p>
-      <div class="about-container">
-        <!-- Left Column for Images -->
-        <div class="about-images left">
-          <img src="assets/about1.png" alt="Presentation Illustration" class="about-image" />
-          <img src="assets/about2.png" alt="Research Illustration" class="about-image" style="margin-top: 50px;" />
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="new-accordion-item">
+    <div class="new-header" onclick="toggleFAQSection(this)">
+      <span class="new-title"><span class="highlight">■</span> FAQ</span>
+      <span class="new-icon">+</span>
+    </div>
+  
+    <div class="new-content" id="faqSection">
+      <div class="new-inner-content">
+        <!-- Nested FAQ Items -->
+        <div class="nested-item">
+          <div class="nested-header" onclick="toggleNestedFAQ(this)">
+            <span class="nested-title"><span class="highlight">•</span> Is there any fee for non-IITB participants?</span>
+            <span class="nested-icon">+</span>
+          </div>
+          <div class="nested-content">
+            <p>There is no charge for registering for any workshops, competitions, or sessions.</p>
+          </div>
         </div>
-
-        <!-- Middle Column for Text -->
-        <div class="about-content">
-
-          <p style="text-align: justify; font-size: x-large;">
-            ResCon is the Annual Research Conclave for undergraduates at IIT Bombay, organised by EnPower—the research
-            promotion wing of the institute in collaboration with IRCC at TechConnect, Techfest 2024.
-          </p>
-          <p style="text-align: justify; font-size: x-large;">
-            The conclave aims to stimulate engineering curiosity in UG students and create a platform for UG researchers
-            to display their research work, offering a variety of exciting competitions, workshops, keynote speeches,
-            and much more.
-          </p>
-          <p style="text-align: justify; font-size: x-large;">
-            At ResCon, the brightest minds converge to propel research forward. The event revolves around three themes:
-            Soch, Vichar, and Achar, each fostering unique insights and collaboration.
-          </p>
+  
+        <div class="nested-item">
+          <div class="nested-header" onclick="toggleNestedFAQ(this)">
+            <span class="nested-title"><span class="highlight">•</span> Will I be provided with accommodation in the IIT Bombay campus?</span>
+            <span class="nested-icon">+</span>
+          </div>
+          <div class="nested-content">
+            <p>
+              Yes, accommodation facilities can be availed through TechFest IIT Bombay registration as ResCon, TechConnect 2024 is collocated in TechFest.
+              The accommodation can be booked by visiting the <a href="https://techfest.org/">https://techfest.org/</a> website.
+              Alternatively, a list of accommodation options near IIT Bombay is available <a href="https://docs.google.com/document/d/1L-LPekwO19v4tlkhndaLlj6lndnhaTobhH_ZTSdXJBo/edit?usp=sharing">here</a>.
+            </p>
+          </div>
         </div>
-
-        <!-- Right Column for Images -->
-        <div class="about-images right">
-          <img src="assets/about3.png" alt="Team Collaboration" class="about-image" />
-          <img src="assets/about4.png" alt="Data Analysis" class="about-image" />
+  
+        <div class="nested-item">
+          <div class="nested-header" onclick="toggleNestedFAQ(this)">
+            <span class="nested-title"><span class="highlight">•</span> Is there a provision for meals/refreshments?</span>
+            <span class="nested-icon">+</span>
+          </div>
+          <div class="nested-content">
+            <p>Yes, breakfast, lunch, and high-tea snacks will be provided to the participants on the conference day.</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="soch">
-      <h3> SOCH</h3>
-      <div class="soch-section">
-
-        <div class="soch-images-left">
-          <img src="assets/soch session 1.png" alt="Image 1" class="soch-image">
-          <img src="assets/soch session 3.png" alt="Image 2" class="soch-image">
-          <img src="assets/soch session 2.png" alt="Image 3" class="soch-image">
+  
+        <div class="nested-item">
+          <div class="nested-header" onclick="toggleNestedFAQ(this)">
+            <span class="nested-title"><span class="highlight">•</span> Is it necessary to have a prior publication or a poster to be eligible for participation in the competition?</span>
+            <span class="nested-icon">+</span>
+          </div>
+          <div class="nested-content">
+            <p>
+              There is no requirement for prior research publications. We only request a summary of your work through the abstract. Selected submissions will be provided with a poster template for their use.
+            </p>
+          </div>
         </div>
-
-        <div class="soch-content">
-
-          <p style="font-size: x-large;">Soch features insights from leading researchers and visionary thinkers. These
-            sessions are designed to broaden perspectives, offering participants a fresh outlook on research and its
-            possibilities.</p>
-          <p style="font-size: x-large;">Details regarding this year’s discussions would be announced soon.</p>
+  
+        <div class="nested-item">
+          <div class="nested-header" onclick="toggleNestedFAQ(this)">
+            <span class="nested-title"><span class="highlight">•</span> Is it possible to showcase research projects in fields other than engineering or science at the undergraduate conference?</span>
+            <span class="nested-icon">+</span>
+          </div>
+          <div class="nested-content">
+            <p>Yes, please view the registration link to explore the available domain entries.</p>
+          </div>
         </div>
-
-        <div class="soch-images-right">
-          <img src="assets/soch illustration.png" alt="Image 4" class="soch-image-right">
+  
+        <div class="nested-item">
+          <div class="nested-header" onclick="toggleNestedFAQ(this)">
+            <span class="nested-title"><span class="highlight">•</span> For competition participants, is it necessary to attend all conference events to qualify for a participation certificate?</span>
+            <span class="nested-icon">+</span>
+          </div>
+          <div class="nested-content">
+            <p>
+              Yes, attendance for each session will be tracked. Certificates will only be issued to participants who are present at all events across both days.
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
-
-
-    <section class="soch">
-      <h3> VICHAR</h3>
-      <div class="vichar-section">
-        <div class="vichar-images-left">
-          <img src="assets/vichar session 1.png" alt="Image 1" class="soch-image">
-          <img src="assets/vichar session 2.png" alt="Image 2" class="soch-image">
-        </div>
-
-        <div class="soch-content">
-
-          <p style="font-size: x-large;">Vichar connects thought leaders from diverse fields to discuss critical topics
-            like “Industry and Academia” and “AI in Research.” Interactive workshops on “Ethics in Research” and
-            “Entrepreneurship” deepen participants’ understanding.</p>
-          <p style="font-size: x-large;">The topics for the panel discussions and registrations for the workshop under
-            ResCon 2024 will be released soon. </p>
-        </div>
-
-        <div class="soch-images-right">
-          <img src="assets/vichar illustration.png" alt="Image 4" class="soch-image-right">
-        </div>
-      </div>
-    </section>
-
-    <section class="soch">
-      <h3> ACHAR</h3>
-      <div class="vichar-section">
-        <div class="vichar-images-left">
-          <img src="assets/achar session 1.png" alt="Image 1" class="soch-image">
-          <img src="assets/achar session 2.png" alt="Image 2" class="soch-image">
-        </div>
-
-        <div class="soch-content">
-
-          <p style="font-size: x-large;">Achar, the highlight of ResCon, is a competitive platform for participants to
-            present their research through compelling posters and abstracts. Events include a 3-Minute Flash Talk,
-            Poster Presentation, and a 15-minute Research Presentation, where students present their work in an engaging
-            format to peers and experts. </p>
-
-        </div>
-
-        <div class="soch-images-right">
-          <img src="assets/achar illustration.png" alt="Image 4" class="soch-image-right">
-        </div>
-      </div>
-    </section>
-
-    <div class="accordion">
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span class="accordion-title"><span class="highlight">■</span>SOCH</span>
-          <span class="accordion-icon">+</span>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="content-grid">
-              <div>
-                <p class="content-text">
-                  Soch features insights from leading researchers and visionary thinkers.
-                  These sessions are designed to broaden perspectives, offering participants a
-                  fresh outlook on research and its possibilities.
-                </p>
-                <p class="content-text">
-                  Details regarding this year's discussions would be announced soon.
-                </p>
-              </div>
-            </div>
+  
+        <div class="nested-item">
+          <div class="nested-header" onclick="toggleNestedFAQ(this)">
+            <span class="nested-title"><span class="highlight">•</span> Can ongoing projects be presented at ResCon 2024?</span>
+            <span class="nested-icon">+</span>
+          </div>
+          <div class="nested-content">
+            <p>
+              Yes, ongoing projects can be showcased by highlighting key intermediate outcomes and placing particular emphasis on the path toward project completion.
+            </p>
           </div>
         </div>
       </div>
+    </div>
+</div>
 
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span class="accordion-title"><span class="highlight">■</span>VICHAAR</span>
-          <span class="accordion-icon">+</span>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="content-grid">
-              <div>
-                <p class="content-text">
-                  Vichar connects thought leaders from diverse fields to discuss critical topics
-                  like "Industry and Academia" and "AI in Research." Interactive workshops on
-                  "Ethics in Research" and "Entrepreneurship" deepen participants' understanding.
-                </p>
-                <p class="content-text">
-                  The topics for the panel discussions and registrations for the workshop under
-                  ResCon 2024 will be released soon.
-                </p>
-              </div>
-            </div>
+      
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleMapContent(this)">
+            <span class="accordion-title"><span class="highlight">■</span> Contact Details and Location</span>
+            <span class="accordion-icon">+</span>
           </div>
         </div>
       </div>
-
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span class="accordion-title"><span class="highlight">■</span>ACHAR</span>
-          <span class="accordion-icon">+</span>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="content-grid">
-              <div>
-                <p class="content-text">
-                  Achar, the highlight of ResCon, is a competitive platform for participants to
-                  present their research through compelling posters and abstracts. Events include
-                  a 3-Minute Flash Talk, Poster Presentation, and a 15-minute Research Presentation,
-                  where students present their work in an engaging format to peers and experts.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TODO fix this -->
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span class="accordion-title"><span class="highlight">■</span>Contact details and location</span>
-          <span class="accordion-icon">+</span>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="content-grid">
-              <div>
-                <p class="content-text">
-                  contact details and location
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- TODO fix this -->
-      <div class="accordion-item">
-        <div class="accordion-header">
-          <span class="accordion-title"><span class="highlight">■</span>FAQ</span>
-          <span class="accordion-icon">+</span>
-        </div>
-
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="in-accordion-item">
-              <div class="in-accordion-header">
-                <span class="accordion-title"><span class="highlight" style=>•</span>Is there any fee for non-IITB
-                  participants?</span>
-                <span class="accordion-icon">+</span>
-              </div>
-              <div class="in-accordion-content">
-                <div class="accordion-content-inner">
-                  <div>
-                    <p class="content-text">
-                      There is no charge for registering for any workshops, competitions, or sessions.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="in-accordion-item">
-              <div class="in-accordion-header">
-                <span class="accordion-title"><span class="highlight" style=>•</span>Will I be provided with
-                  accommodation in the IIT Bombay campus?</span>
-                <span class="accordion-icon">+</span>
-              </div>
-              <div class="in-accordion-content">
-                <div class="accordion-content-inner">
-                  <div>
-                    <p class="content-text">
-                      Yes, accommodation facilities can be availed through TechFest IIT Bombay registration as ResCon,
-                      TechConnect 2024 is collocated in TechFest.
-                      The accommodation can be booked by visiting the <a
-                        href="https://techfest.org/">https://techfest.org/</a> website.
-                      Alternatively, a
-                      list of accommodation options near IIT Bombay is available <a
-                        href="https://docs.google.com/document/d/1L-LPekwO19v4tlkhndaLlj6lndnhaTobhH_ZTSdXJBo/edit?usp=sharing">here</a>.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="in-accordion-item">
-              <div class="in-accordion-header">
-                <span class="accordion-title"><span class="highlight" style=>•</span>Is there a provision for
-                  meals/refreshments?</span>
-                <span class="accordion-icon">+</span>
-              </div>
-              <div class="in-accordion-content">
-                <div class="accordion-content-inner">
-                  <div>
-                    <p class="content-text">
-                      Yes, breakfast lunch and high-tea snacks will be provided to the participants on the conference
-                      day. </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="in-accordion-item">
-              <div class="in-accordion-header">
-                <span class="accordion-title"><span class="highlight" style=>•</span>Is it necessary to have a prior
-                  publication or a poster to be eligible for participation in the competition?
-                </span>
-                <span class="accordion-icon">+</span>
-              </div>
-              <div class="in-accordion-content">
-                <div class="accordion-content-inner">
-                  <div>
-                    <p class="content-text">
-                      There is no requirement for prior research publications. We only request a summary of your work
-                      through the abstract. Selected submissions will be provided with a poster template for their use.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="in-accordion-item">
-              <div class="in-accordion-header">
-                <span class="accordion-title"><span class="highlight" style=>•</span>Is it possible to showcase research
-                  projects in fields other than engineering or science at the undergraduate conference?
-                </span>
-                <span class="accordion-icon">+</span>
-              </div>
-              <div class="in-accordion-content">
-                <div class="accordion-content-inner">
-                  <div>
-                    <p class="content-text">
-                      Yes, please view the registration link to explore the available domain entries.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="in-accordion-item">
-              <div class="in-accordion-header">
-                <span class="accordion-title"><span class="highlight" style=>•</span>For competition participants, is it
-                  necessary to attend all conference events to qualify for a participation certificate?
-                </span>
-                <span class="accordion-icon">+</span>
-              </div>
-              <div class="in-accordion-content">
-                <div class="accordion-content-inner">
-                  <div>
-                    <p class="content-text">
-                      Yes, attendance for each session will be tracked. Certificates will only be issued to participants
-                      who are present at all events across both days.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-content-inner">
-            <div class="in-accordion-item">
-              <div class="in-accordion-header">
-                <span class="accordion-title"><span class="highlight" style=>•</span>Can ongoing projects be presented
-                  at ResCon 2024?
-                </span>
-                <span class="accordion-icon">+</span>
-              </div>
-              <div class="in-accordion-content">
-                <div class="accordion-content-inner">
-                  <div>
-                    <p class="content-text">
-                      Yes, ongoing projects can be showcased by highlighting key intermediate outcomes and placing
-                      particular emphasis on the path toward project completion.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <section class="schedule" id="schedule">
-        <div class="left-img">
-          <img src="assets/8_copy3.jpg" alt="cpy" />
-        </div>
-        <div class="schedule-content">
-          <p>WILL BE UPDATED SOON</p>
-
-        </div>
-        <div class="right-img">
-          <img src="assets/8_copy2.jpg" alt='cpy' />
-        </div>
-
-      </section>
-      <section class="team" id="team">
-        <div class="head">
-          <img src="assets/iitb logo.png" alt="" class="i1">
-          <img src="assets/enpower logo.png" alt="" class='i1'>
-
-        </div>
-        <div class="team-content">
-          <img src="assets/9_copy1.png" alt='team_photo' />
-        </div>
-        <div class="team-contact">
-          <div class="m1">
-            <h4>Aarohi Deshpande <br></h4>
-            <p>Institute Secretary Academic Affairs and Head,EnPower</p>
-            <p>isaa.enpower.iitb@gmail.com</p>
-          </div>
-          <div class="con">
-            <div class="m2">
-              <h4>Dev Arora</h4>
-              <p>devarora3004@gmail.com</p>
-              <p>+91 8218705411</p>
-              <h4>Khushi Sharma</h4>
-              <p>khushinrs@gmail.com</p>
-              <p>+91 99995 95888
-              </p>
-            </div>
-            <div class="m3">
-              <h4>Nilay Shahapure</h4>
-              <p>shahapurenilay2@gmail.com</p>
-              <p>+91 7666946224</p>
-              <h4>Rupanshi Vijayvargiya</h4>
-              <p>rupanshivijay10@gmail.com</p>
-              <p>+91 9301891196
-              </p>
-            </div>
-          </div>
-
-
-        </div>
-      </section>
-      <section class="map-content">
-        <div class="map"> <img style="height: 400px; width:900px;margin:30px; " src="assets/map_ltpcsa.jpg" alt="map"
-            class="map_img">
+      
+      <section class="map-content" id="mapSection">
+        <div class="map">
+          <img style="height: 500px; width:900px; margin:30px;" src="assets/map_ltpcsa.jpg" alt="map" class="map_img">
           <div class="event-organizer">
-            <h3>Event Organizer</h3>
+            <h1>Event Organizer</h1>
             <ul>
               <li>
                 <i class="icon">&#9993;</i>
@@ -455,13 +155,8 @@
               </li>
               <li>
                 <i class="icon">&#9742;</i>
-                Aarohi:
+                Aarohi: +91 9137472201
               </li>
-
-              <!-- <li>
-                <i class="icon">&#9993;</i>
-                <a href="/">acad.council@iiti.ac.in</a>
-              </li> -->
               <li>
                 <i class="icon">&#127758;</i>
                 Research Conclave
@@ -473,10 +168,8 @@
             </ul>
           </div>
         </div>
-
       </section>
-
-
+      
 
 
   </main>
@@ -484,60 +177,51 @@
   <footer>
     <p>&copy; 2024 ResCon. All rights reserved.</p>
   </footer>
-
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-      mobileMenuToggle.addEventListener('click', function () {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-      });
-      window.addEventListener('resize', function () {
-        if (window.innerWidth >= 768) {
-          navLinks.style.display = 'flex';
-        } else {
-          navLinks.style.display = 'none';
-        }
-      });
-    });
-
-    document.querySelectorAll('.accordion-header').forEach(button => {
-      button.addEventListener('click', () => {
-        const accordionItem = button.parentElement;
-        const isActive = accordionItem.classList.contains('active');
-
-        // // Close all accordion items
-        // document.querySelectorAll('.accordion-item').forEach(item => {
-        //   item.classList.remove('active');
-        // });
-
-        // If the clicked item wasn't active, open it
-        if (!isActive) {
-          accordionItem.classList.add('active');
-        }
-        // If the clicked item was active, close it
-        else {
-          accordionItem.classList.remove('active');
-        }
-      });
-    });
-    document.querySelectorAll('.in-accordion-header').forEach(button => {
-      button.addEventListener('click', () => {
-        console.log('in-accordion')
-        const inAccordionItem = button.parentElement;
-        const isActive = inAccordionItem.classList.contains('active');
+   // Toggle the main FAQ section
 
 
-        // If the clicked item wasn't active, open it
-        if (!isActive) {
-          inAccordionItem.classList.add('active');
-        }
-        else {
-          inAccordionItem.classList.remove('active');
-        }
-      });
-    });
+    function toggleMapContent(header) {
+      const mapSection = document.getElementById("mapSection");
+      const icon = header.querySelector(".accordion-icon");
+  
+      if (mapSection.classList.contains("active")) {
+        mapSection.classList.remove("active");
+        icon.textContent = "+";
+      } else {
+        mapSection.classList.add("active");
+        icon.textContent = "-";
+      }
+    }
+
+
+    // Toggle main FAQ section
+function toggleFAQSection(header) {
+  const faqSection = document.getElementById("faqSection");
+  const icon = header.querySelector(".new-icon");
+
+  // Toggle the active state
+  const isActive = faqSection.classList.toggle("active");
+
+  // Update the icon
+  icon.textContent = isActive ? "-" : "+";
+}
+
+// Toggle nested FAQ items
+function toggleNestedFAQ(header) {
+  const content = header.nextElementSibling; // Get the sibling content div
+  const icon = header.querySelector(".nested-icon");
+
+  // Toggle the active state
+  const isActive = content.classList.toggle("active");
+
+  // Update the icon
+  icon.textContent = isActive ? "-" : "+";
+}
+
+
   </script>
+
 </body>
 
 </html>

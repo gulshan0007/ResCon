@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResCon</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img class="logo-img" src="assets/iitb logo.png" alt="Logo">
+      <img class="logo-img" src="assets/enpower logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#index.html/#home">HOME</a></li>
+        <li><a href="about.html">ABOUT THE EVENT</a></li>
+        <li><a href="schedule.html">SCHEDULE</a></li>
+        <li><a href="team.html">TEAM</a></li>
+        <li><a href="#register">REGISTER NOW</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1 class="title">ResCon</h1>
+      <p class="subtitle">ONE-DAY LONG PAN-INDIA RESEARCH CONCLAVE</p>
+      <p class="subsubtitle">Under TechConnect, Techfest 2024</p>
+      <button class="register-btn">REGISTER NOW!</button>
+    </section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+      <!-- TODO fix this -->
+     
+  
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <div class="accordion-header" onclick="toggleMapContent(this)">
+            <span class="accordion-title"><span class="highlight">■</span> Contact Details and Location</span>
+            <span class="accordion-icon">+</span>
+          </div>
+        </div>
+      </div>
+      
+      <section class="map-content" id="mapSection">
+        <div class="map">
+          <img style="height: 500px; width:900px; margin:30px;" src="assets/map_ltpcsa.jpg" alt="map" class="map_img">
+          <div class="event-organizer">
+            <h1>Event Organizer</h1>
+            <ul>
+              <li>
+                <i class="icon">&#9993;</i>
+                EnPoWER - IIT Bombay
+              </li>
+              <li>
+                <i class="icon">&#9742;</i>
+                Aarohi: +91 9137472201
+              </li>
+              <li>
+                <i class="icon">&#127758;</i>
+                Research Conclave
+              </li>
+              <li>
+                <i class="icon">&#128279;</i>
+                <a href="https://www.iitb.ac.in" target="_blank">www.iitb.ac.in</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2024 ResCon. All rights reserved.</p>
+  </footer>
+  <script>
+    function toggleMapContent(header) {
+      const mapSection = document.getElementById("mapSection");
+      const icon = header.querySelector(".accordion-icon");
+  
+      if (mapSection.classList.contains("active")) {
+        mapSection.classList.remove("active");
+        icon.textContent = "+";
+      } else {
+        mapSection.classList.add("active");
+        icon.textContent = "-";
+      }
+    }
+
+
+  </script>
+
+</body>
+
+</html>
