@@ -1,129 +1,282 @@
-/* Reset Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-main {
-    background: url("assets/10.png");
-    background-repeat: no-repeat;
-    background-color: #0e0e0e;
-    background-size:cover;
-    background-position: center;
-    width: 100%; /* Ensure it spans the full width */
-    height: 100vh;
+/* Modern Responsive Styles for Team Page */
+
+:root {
+  /* Design Tokens */
+  --background-dark: #0e0e0e;
+  --text-white: #ffffff;
+  --accent-pink: #ff4081;
+  --hover-pink: #ff0066;
+  --font-primary: 'Inter', 'Arial', sans-serif;
 }
 
-.logo {
-    flex-direction: row;
+/* Enhanced Reset and Base Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo-img {
-    width: 150px;
-    margin-left: 50px;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base font size for responsive typography */
 }
 
-/* Body Styles */
-body {
-    font-family: Arial, sans-serif;
-
-    color: #fff;
-    line-height: 1.6;
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-primary);
+  color: var(--text-white);
+  background: url('assets/10.png') no-repeat center center fixed;
+  background-color: var(--background-dark);
+  background-size: cover;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Navbar Styles */
+/* Responsive Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--background-dark);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
 
-    background-color: #0e0e0e;
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    margin: 3px 0;
+    transition: 0.4s;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-links li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
+
 .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent-pink);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-pink);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Team Section Styles */
 .team {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 50px;
-  }
-  
-  .team-content img {
-    margin:20px;
-    width: 800px;
-    height: 70vh;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .team-contact {
-    margin:20px;
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    gap: 2px;
-  }
-  
-  .m1, .con {
-    font-size: 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 2rem;
+  min-height: calc(100vh - 100px); /* Subtract navbar and footer height */
+}
 
-  .con{
-    margin-top: 100px;
-  }
-  
-  h4 {
-    margin: 0 0 5px;
-    font-size: 1.2em;
-  }
-  
-  p {
-    margin: 0 0 10px;
-    font-size: 1em;
-  }
-  
-  @media (max-width: 768px) {
-    .team {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .team-contact {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .m1, .con {
-      flex: none;
-      width: 100%;
-    }
-  }
-  
+.team-content img {
+  margin: 20px;
+  width: clamp(300px, 80%, 800px);
+  height: auto;
+  max-height: 70vh;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
-  
+.team-contact {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  gap: 2rem;
+}
+
+.m1, .con {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  background: rgba(14, 14, 14, 0.7);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.con {
+  margin-top: 100px;
+}
+
+h4 {
+  margin: 0 0 10px;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  color: var(--accent-pink);
+}
+
+p {
+  margin: 0 0 10px;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  line-height: 1.5;
+}
+
 /* Footer Styles */
 footer {
-    font-size: 1.5rem;
-    bottom: 0;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--background-dark);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu */
+}
+
+.hamburger-line {
+  background-color: var(--accent-pink); /* Change to pink */
+  width: 25px;
+  height: 3px;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+.nav-links {
+    /* Hide navigation by default on mobile */
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--background-dark);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Show navigation when 'active' class is added */
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 0;
+    width: 100%;
     text-align: center;
-    padding: 20px;
-    background-color: #0e0e0e;
+}
+
+/* Optional: Hamburger menu animation */
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+  .team {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+  }
+
+  .team-contact {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+  }
+
+  .m1, .con {
+      flex: none;
+      width: 100%;
+      margin-top: 0;
+  }
+
+  .logo-img {
+      margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h4 {
+      font-size: 1rem;
+  }
+
+  p {
+      font-size: 0.9rem;
+  }
+}
+
+/* Accessibility and Performance Enhancements */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a, button {
+  transition: all 0.3s ease;
 }

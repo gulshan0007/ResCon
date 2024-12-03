@@ -1,79 +1,252 @@
-/* General Styles */
+/* Modern Responsive Styles for ResCon Website */
 
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    color: white;
-    background: url('assets/ResCon\ Website\ Design\ \(1\).png') no-repeat center center fixed;
-    background-size: cover;
+:root {
+    /* Design Tokens */
+    --background-dark: #0e0e0e;
+    --text-white: #ffffff;
+    --accent-pink: #ff4081;
+    --hover-pink: #ff0066;
+    --font-primary: 'Inter', 'Arial', sans-serif;
 }
 
-
-/* Reset Styles */
-* {
+/* Enhanced Reset and Base Styles */
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size for responsive typography */
+}
 
-/* Navbar Styles */
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-primary);
+    color: var(--text-white);
+    background: url('assets/ResCon\ Website\ Design\ \(1\).png') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Responsive Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
-    background-color: #0e0e0e;
+    padding: 1rem 5%;
+    background-color: var(--background-dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    margin: 3px 0;
+    transition: 0.4s;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
+    gap: 1.5rem;
+    align-items: center;
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 .nav-links a {
-    color: #fff;
+    color: var(--text-white);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent-pink);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-pink);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Logo Styling */
 .logo {
-    flex-direction: row;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .logo-img {
-    width: 150px;
-    margin-left: 50px;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-/* Main Content */
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* Main Content Responsive Design */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: calc(100vh - 100px); /* Subtract navbar and footer height */
     text-align: center;
+    padding: 2rem;
+}
+
+.content {
+    max-width: 800px;
+    padding: 2rem;
+    background: rgba(14, 14, 14, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    margin-bottom: 1.5rem;
+    color: var(--accent-pink);
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
 .content p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--text-white);
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #0e0e0e;
-    font-size: 14px;
+    padding: 1.5rem;
+    background-color: var(--background-dark);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: flex; /* Show hamburger menu */
+    }
+    
+    .hamburger-line {
+      background-color: var(--accent-pink); /* Change to pink */
+      width: 25px;
+      height: 3px;
+      margin: 3px 0;
+      transition: 0.4s;
+    }
+    .nav-links {
+        /* Hide navigation by default on mobile */
+        display: none;
+        position: absolute;
+        top: 100%; /* Position below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: var(--background-dark);
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Show navigation when 'active' class is added */
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Optional: Hamburger menu animation */
+    .hamburger-menu.active .hamburger-line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active .hamburger-line:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .logo {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo-img {
+        width: 100px;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .content {
+        width: 95%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+/* Accessibility and Performance Enhancements */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a, button {
+    transition: all 0.3s ease;
 }

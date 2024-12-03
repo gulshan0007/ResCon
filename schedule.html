@@ -12,6 +12,13 @@
           <img class="logo-img" src="assets/iitb logo.png" alt="Logo">
           <img class="logo-img" src="assets/enpower logo.png" alt="Logo">
         </div>
+
+        <div class="hamburger-menu">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </div>
+        
         <nav>
           <ul class="nav-links">
             <li><a href="index.html">HOME</a></li>
@@ -32,5 +39,29 @@
     <footer>
         <p>&copy; 2024 ResCon. All rights reserved.</p>
       </footer>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        // Select the hamburger menu and navigation links
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+    
+        // Toggle mobile menu
+        hamburgerMenu.addEventListener('click', () => {
+            // Toggle 'active' class on navigation
+            navLinks.classList.toggle('active');
+            
+            // Optional: Animate hamburger menu icon
+            hamburgerMenu.classList.toggle('active');
+        });
+    
+        // Close menu when a nav link is clicked (optional, but improves UX)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburgerMenu.classList.remove('active');
+            });
+        });
+    });
+      </script>
 </body>
 </html>

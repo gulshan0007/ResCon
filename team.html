@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ResCon</title>
+  <title>ResCon - Team</title>
   <link rel="stylesheet" href="style2.css">
-  <script src="script.js"></script>
 </head>
-
 <body>
   <header class="navbar">
     <div class="logo">
       <img class="logo-img" src="assets/iitb logo.png" alt="Logo">
       <img class="logo-img" src="assets/enpower logo.png" alt="Logo">
     </div>
+    
+    <!-- Hamburger Menu Button -->
+    <div class="hamburger-menu">
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+    </div>
+
     <nav>
       <ul class="nav-links">
         <li><a href="index.html#home">HOME</a></li>
@@ -24,62 +29,69 @@
         <li><a href="#register">REGISTER NOW</a></li>
       </ul>
     </nav>
-
   </header>
 
   <main>
-   
-
-     
-      <section class="team" id="team">
-        <div class="head">
-        
-
+    <section class="team" id="team">
+      <div class="head"></div>
+      <div class="team-content">
+        <img src="assets/9_copy1.png" alt='team_photo' />
+      </div>
+      <div class="team-contact">
+        <div class="m1">
+          <h4>Aarohi Deshpande <br></h4>
+          <p>Institute Secretary Academic Affairs and Head, EnPower</p>
+          <p>isaa.enpower.iitb@gmail.com</p>
         </div>
-        <div class="team-content">
-          <img src="assets/9_copy1.png" alt='team_photo' />
-        </div>
-        <div class="team-contact">
-          <div class="m1">
-            <h4>Aarohi Deshpande <br></h4>
-            <p>Institute Secretary Academic Affairs and Head,EnPower</p>
-            <p>isaa.enpower.iitb@gmail.com</p>
+        <div class="con">
+          <div class="m2">
+            <h4>Dev Arora</h4>
+            <p>devarora3004@gmail.com</p>
+            <p>+91 8218705411</p>
+            <h4>Khushi Sharma</h4>
+            <p>khushinrs@gmail.com</p>
+            <p>+91 99995 95888</p>
           </div>
-          <div class="con">
-            <div class="m2">
-              <h4>Dev Arora</h4>
-              <p>devarora3004@gmail.com</p>
-              <p>+91 8218705411</p>
-              <h4>Khushi Sharma</h4>
-              <p>khushinrs@gmail.com</p>
-              <p>+91 99995 95888
-              </p>
-            </div>
-            <div class="m3">
-              <h4>Nilay Shahapure</h4>
-              <p>shahapurenilay2@gmail.com</p>
-              <p>+91 7666946224</p>
-              <h4>Rupanshi Vijayvargiya</h4>
-              <p>rupanshivijay10@gmail.com</p>
-              <p>+91 9301891196
-              </p>
-            </div>
+          <div class="m3">
+            <h4>Nilay Shahapure</h4>
+            <p>shahapurenilay2@gmail.com</p>
+            <p>+91 7666946224</p>
+            <h4>Rupanshi Vijayvargiya</h4>
+            <p>rupanshivijay10@gmail.com</p>
+            <p>+91 9301891196</p>
           </div>
-
-
         </div>
-      </section>
-    
-
-     
-
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p style="color: white;">&copy; 2024 ResCon. All rights reserved.</p>
+    <p>&copy; 2024 ResCon. All rights reserved.</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // Select the hamburger menu and navigation links
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
 
+    // Toggle mobile menu
+    hamburgerMenu.addEventListener('click', () => {
+        // Toggle 'active' class on navigation
+        navLinks.classList.toggle('active');
+        
+        // Optional: Animate hamburger menu icon
+        hamburgerMenu.classList.toggle('active');
+    });
+
+    // Close menu when a nav link is clicked (optional, but improves UX)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            hamburgerMenu.classList.remove('active');
+        });
+    });
+});
+  </script>
 </body>
-
 </html>
