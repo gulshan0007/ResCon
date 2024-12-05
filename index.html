@@ -183,7 +183,49 @@
     <p>&copy; 2024 ResCon. All rights reserved.</p>
   </footer>
 
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const registerBtn = document.querySelector('.register-btn');
+    const registerNavLink = document.querySelector('a[href="#register"]');
+    const registerModal = document.getElementById('registerModal');
+    const closeModal = document.getElementById('closeModal');
+
+    // Function to open modal
+    const openModal = () => {
+        registerModal.style.display = 'flex';
+        setTimeout(() => {
+            registerModal.querySelector('.register-modal').classList.add('show');
+        }, 10);
+    };
+
+    // Function to close modal
+    const closeModalFunc = () => {
+        registerModal.querySelector('.register-modal').classList.remove('show');
+        setTimeout(() => {
+            registerModal.style.display = 'none';
+        }, 300);
+    };
+
+    // Open modal from register button
+    registerBtn.addEventListener('click', openModal);
+
+    // Open modal from nav link
+    registerNavLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        openModal();
+    });
+
+    // Close modal
+    closeModal.addEventListener('click', closeModalFunc);
+
+    // Close modal when clicking outside
+    registerModal.addEventListener('click', (event) => {
+        if (event.target === registerModal) {
+            closeModalFunc();
+        }
+    });
+});
+  </script>
   
   <script>
     document.addEventListener('DOMContentLoaded', () => {
