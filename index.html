@@ -39,7 +39,7 @@
       <h1 class="title">ResCon</h1>
       <p class="subtitle">ONE-DAY LONG PAN-INDIA RESEARCH CONCLAVE</p>
       <p class="subsubtitle">Under TechConnect, Techfest 2024</p>
-      <button class="register-btn">REGISTER NOW!</button>
+      <button class="register-btn" id="openRegisterModal">REGISTER NOW!</button>
     </section>
 
 <br>
@@ -166,13 +166,10 @@
                 Aarohi: +91 9137472201
               </li>
               <li>
-                <i class="icon">&#127758;</i>
-                Research Conclave
+                <i class="icon">&#128172;</i>
+                <a href="team.html" style="color: white; text-decoration: none;">Contact Us</a>
               </li>
-              <li>
-                <i class="icon">&#128279;</i>
-                <a href="https://www.iitb.ac.in" target="_blank">www.iitb.ac.in</a>
-              </li>
+              
             </ul>
           </div>
         </div>
@@ -185,6 +182,9 @@
   <footer>
     <p>&copy; 2024 ResCon. All rights reserved.</p>
   </footer>
+
+  
+  
   <script>
     document.addEventListener('DOMContentLoaded', () => {
     // Select the hamburger menu and navigation links
@@ -255,5 +255,54 @@ function toggleNestedFAQ(header) {
   </script>
 
 </body>
+<!-- At the end of your <body> tag -->
+<div id="registerModal" class="register-modal-overlay" style="display:none;">
+    <!-- Paste the entire modal HTML content here -->
+    <div class="register-modal">
+        <div class="modal-close" id="closeModal">&times;</div>
+        <h2 class="modal-title">Register for ResCon</h2>
+        <div class="modal-buttons">
+            <a href="https://unstop.com/o/Kn3ueNq?lb=gJILhY8k&utm_medium=Share&utm_source=shortUrl" target="_blank" class="modal-button">
+                Achar Poster Presentation Competition
+            </a>
+            <a href="https://forms.gle/your-other-events-form-link" target="_blank" class="modal-button">
+                Other Events
+            </a>
+        </div>
+    </div>
+</div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const registerBtn = document.querySelector('.register-btn');
+        const registerModal = document.getElementById('registerModal');
+        const closeModal = document.getElementById('closeModal');
+
+        // Open modal
+        registerBtn.addEventListener('click', () => {
+            registerModal.style.display = 'flex';
+            setTimeout(() => {
+                registerModal.querySelector('.register-modal').classList.add('show');
+            }, 10);
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            registerModal.querySelector('.register-modal').classList.remove('show');
+            setTimeout(() => {
+                registerModal.style.display = 'none';
+            }, 300);
+        });
+
+        // Close modal when clicking outside
+        registerModal.addEventListener('click', (event) => {
+            if (event.target === registerModal) {
+                registerModal.querySelector('.register-modal').classList.remove('show');
+                setTimeout(() => {
+                    registerModal.style.display = 'none';
+                }, 300);
+            }
+        });
+    });
+</script>
 </html>

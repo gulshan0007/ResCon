@@ -725,6 +725,65 @@ h4 {
     max-width: 800px;
     margin: 0 auto;
 }
+/* Mobile Responsiveness for Soch, Vichar, and Achar Sections */
+@media screen and (max-width: 768px) {
+    .soch-section, .vichar-section {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        grid-template-rows: auto auto auto; /* Create three rows */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .soch-images-left, .vichar-images-left {
+        grid-template-rows: auto; /* Remove multiple rows */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible image layout */
+        gap: 15px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .soch-content, .soch-images-right {
+        grid-column: 1; /* Ensure they take full width */
+        text-align: center;
+    }
+
+    .soch h3 {
+        font-size: 3rem; /* Reduce heading size */
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .soch-content p {
+        font-size: 1rem; /* Slightly reduce font size */
+        text-align: center;
+    }
+
+    .soch-image, .soch-image-right {
+        max-height: 250px; /* Adjust image size */
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+/* Additional Mobile Tweaks for Accordion */
+@media screen and (max-width: 768px) {
+    .accordion {
+        width: 95%; /* Full width with slight margin */
+        margin: 10px auto;
+    }
+
+    .accordion-header {
+        padding: 0.75rem; /* Slightly reduce padding */
+    }
+
+    .accordion-title {
+        font-size: 1.1rem; /* Smaller font */
+    }
+
+    .accordion-icon {
+        font-size: 1.2rem; /* Smaller icon */
+    }
+}
 
 
 
@@ -797,3 +856,110 @@ h4 {
     margin: 5px 0;
   }
 
+        /* Modal Styles */
+        .register-modal-overlay {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .register-modal {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 64, 129, 0.3);
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .register-modal.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #ff4081;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+            color: #ff0066;
+        }
+
+        .modal-title {
+            text-align: center;
+            color: #ff4081;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .modal-button {
+            padding: 15px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .modal-button:hover {
+            background-color: #ff0066;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .register-modal {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .modal-title {
+                font-size: 1.5rem;
+            }
+
+            .modal-button {
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+        }

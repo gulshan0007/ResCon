@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Modal</title>
+    <style>
+        /* Modal Styles */
+        .register-modal-overlay {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .register-modal {
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border: 2px solid rgba(255, 64, 129, 0.3);
+            transform: scale(0.9);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .register-modal.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #ff4081;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+            color: #ff0066;
+        }
+
+        .modal-title {
+            text-align: center;
+            color: #ff4081;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .modal-button {
+            padding: 15px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .modal-button:hover {
+            background-color: #ff0066;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .register-modal {
+                width: 95%;
+                padding: 20px;
+            }
+
+            .modal-title {
+                font-size: 1.5rem;
+            }
+
+            .modal-button {
+                padding: 12px 15px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="registerModal" class="register-modal-overlay">
+        <div class="register-modal">
+            <div class="modal-close" id="closeModal">&times;</div>
+            <h2 class="modal-title">Register for ResCon</h2>
+            <div class="modal-buttons">
+                <a href="https://forms.gle/your-achar-poster-form-link" target="_blank" class="modal-button">
+                    Achar Poster Presentation Competition
+                </a>
+                <a href="https://forms.gle/your-other-events-form-link" target="_blank" class="modal-button">
+                    Other Events
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const registerBtn = document.querySelector('.register-btn');
+            const registerModal = document.getElementById('registerModal');
+            const closeModal = document.getElementById('closeModal');
+
+            // Open modal
+            registerBtn.addEventListener('click', () => {
+                registerModal.style.display = 'flex';
+                setTimeout(() => {
+                    registerModal.querySelector('.register-modal').classList.add('show');
+                }, 10);
+            });
+
+            // Close modal
+            closeModal.addEventListener('click', () => {
+                registerModal.querySelector('.register-modal').classList.remove('show');
+                setTimeout(() => {
+                    registerModal.style.display = 'none';
+                }, 300);
+            });
+
+            // Close modal when clicking outside
+            registerModal.addEventListener('click', (event) => {
+                if (event.target === registerModal) {
+                    registerModal.querySelector('.register-modal').classList.remove('show');
+                    setTimeout(() => {
+                        registerModal.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
