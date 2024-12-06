@@ -295,10 +295,58 @@ function toggleNestedFAQ(header) {
 
 
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const otherEventsButton = document.querySelector('a[href="https://forms.gle/your-other-events-form-link"]');
+    const comingSoonModal = document.getElementById('comingSoonModal');
+    const closeComingSoonModal = document.getElementById('closeComingSoonModal');
+
+    // Open Coming Soon Modal
+    otherEventsButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent link from opening
+        comingSoonModal.style.display = 'flex';
+        setTimeout(() => {
+            comingSoonModal.querySelector('.coming-soon-modal').classList.add('show');
+        }, 10);
+    });
+
+    // Close Coming Soon Modal
+    closeComingSoonModal.addEventListener('click', () => {
+        comingSoonModal.querySelector('.coming-soon-modal').classList.remove('show');
+        setTimeout(() => {
+            comingSoonModal.style.display = 'none';
+        }, 300);
+    });
+
+    // Close modal when clicking outside
+    comingSoonModal.addEventListener('click', (event) => {
+        if (event.target === comingSoonModal) {
+            comingSoonModal.querySelector('.coming-soon-modal').classList.remove('show');
+            setTimeout(() => {
+                comingSoonModal.style.display = 'none';
+            }, 300);
+        }
+    });
+});
+
+  </script>
 
 </body>
 <!-- At the end of your <body> tag -->
 <div id="registerModal" class="register-modal-overlay" style="display:none;">
+
+  <!-- Add this within the register modal section -->
+<div id="comingSoonModal" class="coming-soon-modal-overlay">
+  <div class="coming-soon-modal">
+      <div class="coming-soon-close" id="closeComingSoonModal">&times;</div>
+      <div class="coming-soon-content">
+          <h2>Coming Soon!</h2>
+          <p>We're preparing something exciting for other events.</p>
+          <div class="coming-soon-loader"></div>
+          <p class="coming-soon-subtext">Stay tuned for more details...</p>
+      </div>
+  </div>
+</div>
     <!-- Paste the entire modal HTML content here -->
     <div class="register-modal">
         <div class="modal-close" id="closeModal">&times;</div>
@@ -308,8 +356,8 @@ function toggleNestedFAQ(header) {
                 Achar Poster Presentation Competition
             </a>
             <a href="https://forms.gle/your-other-events-form-link" target="_blank" class="modal-button">
-                Other Events
-            </a>
+              Other Events
+          </a>
         </div>
     </div>
 </div>
