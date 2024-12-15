@@ -435,6 +435,9 @@ footer {
   }
 
   .soch.active, .vichar.active, .achar.active {
+    background: url('assets/back-img.png') no-repeat center center fixed;
+    background-color: var(--background-dark);
+    background-size: cover;
     display: flex;
     flex-direction: column; 
     transition: max-height 0.3s ease, opacity 0.5s ease;/* Display when active */
@@ -446,7 +449,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1.5fr; /* Left (3 images), Middle (text), Right (1 image) */
     gap: 20px;
-    background: #0e0e0e;
     color: #fff;
     padding: 40px;
     width: 100%;
@@ -457,7 +459,6 @@ footer {
     display: grid;
     grid-template-columns: 1.25fr 1.5fr 1.25fr; /* Left (3 images), Middle (text), Right (1 image) */
     gap: 20px;
-    background: #0e0e0e;
     color: #fff;
     padding: 40px;
     width: 100%;
@@ -720,11 +721,170 @@ h4 {
 }
 
 
+.container {
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.card {
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    width: 900px;
+    text-align: center;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+}
+
+.card h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+    margin: 20px 0;
+}
+
+.card h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    color: #d6b8b8;
+    margin: 20px 0;
+}
+
+.card p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    margin: 25px 0;
+}
+.contact {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.contact div {
+    font-family: "Young Serif", serif;
+    font-size: 2rem;
+    color:#ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
   /* Main FAQ Section */
   .new-accordion-item {
     max-width: 800px;
     margin: 0 auto;
 }
+.contact {
+    margin: auto;
+    display: flex;
+    justify-content:space-around;
+    font-size: 0.9rem;
+}
+
+.contact div {
+    font-family: "Young Serif", serif;
+    font-size: 2rem;
+    color:#ffffff;
+    border-radius: 5px;
+}
+  
+
+
+
+/* Main Container */
+.main-container {
+
+    padding: 30px;
+}
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Youngest+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* Header Section */
+.header-section .event-title {
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.header-section .panel-heading {
+    font-family: 'The Youngest Serif', serif;
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Event Information */
+.event-info .event-schedule {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Panelist Section */
+.panelist-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* Individual Panelist Cards */
+.panelist-card {
+    background-color: transparent;
+    border: 2px solid #000;
+    border-radius: 20px;
+    width: 500px; /* Doubled size */
+    height: 600px; /* Doubled height */
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.panelist-card .panelist-image {
+    width: 250px; /* Larger images */
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #fff;
+}
+
+.panelist-card .panelist-name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.panelist-card .panelist-role {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    margin: 8px 0;
+    color: #ffffff;
+}
+
+.panelist-card .panelist-affiliation {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+
 /* Mobile Responsiveness for Soch, Vichar, and Achar Sections */
 @media screen and (max-width: 768px) {
     .soch-section, .vichar-section {
