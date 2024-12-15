@@ -1,4 +1,4 @@
-/* Modern Responsive Styles for ResCon Website */
+/* Modern Responsive Styles for Team Page */
 
 :root {
     /* Design Tokens */
@@ -7,35 +7,36 @@
     --accent-pink: #ff4081;
     --hover-pink: #ff0066;
     --font-primary: 'Inter', 'Arial', sans-serif;
-}
-
-/* Enhanced Reset and Base Styles */
-*,
-*::before,
-*::after {
+  }
+  
+  /* Enhanced Reset and Base Styles */
+  *,
+  *::before,
+  *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
+  }
+  
+  html {
     scroll-behavior: smooth;
     font-size: 16px; /* Base font size for responsive typography */
-}
-
-body, html {
+  }
+  
+  body, html {
     width: 100%;
     height: 100%;
     font-family: var(--font-primary);
     color: var(--text-white);
-    background: url('assets/ResCon\ Website\ Design\ \(1\).png') no-repeat center center fixed;
+    background: url('assets/back-img.png') no-repeat center center fixed;
+    background-color: var(--background-dark);
     background-size: cover;
     line-height: 1.6;
     overflow-x: hidden;
-}
-
-/* Responsive Navbar */
-.navbar {
+  }
+  
+  /* Responsive Navbar */
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,45 +46,46 @@ body, html {
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Hamburger Menu Button */
-.hamburger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 200;
-}
-
-.hamburger-line {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-light);
-    margin: 3px 0;
-    transition: 0.4s;
-}
-
-.nav-links {
+  }
+  
+  
+  /* Hamburger Menu Button */
+  .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 200;
+  }
+  
+  .hamburger-line {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-light);
+      margin: 3px 0;
+      transition: 0.4s;
+  }
+  
+  .nav-links {
     display: flex;
     list-style: none;
     gap: 1.5rem;
     align-items: center;
-}
-
-.nav-links li {
-    margin: 0;
-}
-
-.nav-links a {
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links a {
     color: var(--text-white);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
     position: relative;
     transition: color 0.3s ease;
-}
-
-.nav-links a::after {
+  }
+  
+  .nav-links a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -92,161 +94,295 @@ body, html {
     left: 0;
     background-color: var(--accent-pink);
     transition: width 0.3s ease;
-}
-
-.nav-links a:hover {
+  }
+  
+  .nav-links a:hover {
     color: var(--accent-pink);
-}
-
-.nav-links a:hover::after {
+  }
+  
+  .nav-links a:hover::after {
     width: 100%;
-}
-
-/* Logo Styling */
-.logo {
+  }
+  
+  /* Logo Styling */
+  .logo {
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.logo-img {
+  }
+  
+  .logo-img {
     width: 120px;
     height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
+  }
+  
+  .logo-img:hover {
     transform: scale(1.05);
-}
-
-/* Main Content Responsive Design */
-main {
+  }
+  
+  
+  /* Team Section Styles */
+  .team {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 2rem;
     min-height: calc(100vh - 100px); /* Subtract navbar and footer height */
-    text-align: center;
-    padding: 2rem;
-}
-
-.content {
-    max-width: 800px;
-    padding: 2rem;
+  }
+  
+  .team-content img {
+    margin: 20px;
+    width: clamp(300px, 80%, 800px);
+    height: auto;
+    max-height: 70vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-contact {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: 2rem;
+  }
+  
+  .m1, .con {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
     background: rgba(14, 14, 14, 0.7);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-.content h1 {
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+  }
+  
+  .con {
+    margin-top: 100px;
+  }
+  
+  h4 {
+    margin: 0 0 10px;
+    font-size: clamp(1rem, 4vw, 1.2rem);
     color: var(--accent-pink);
-    font-weight: 700;
-    letter-spacing: -1px;
-}
-
-.content p {
-    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  p {
+    margin: 0 0 10px;
+    font-size: clamp(0.9rem, 3vw, 1rem);
     line-height: 1.5;
-    color: var(--text-white);
+  }
+
+
+  .container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 2rem;
 }
 
-/* Footer Styling */
-footer {
+.heading {
+    font-family: "Young Serif", serif;
+    text-align: center;
+    font-size: 4rem;
+    margin-left:20%;
+    margin-bottom: 20px;
+}
+
+.header {
+display: flex;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.header .event-info {
+text-align: left;
+}
+
+.header .event-info span {
+display: block;
+font-size: 1.5rem;
+font-weight: bold;
+color: #ccc;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+table th, table td {
+    border: 5px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background: #e6e6e6;
+    color: #7b1919;
+}
+
+.contact {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.contact div {
+    font-family: "Young Serif", serif;
+    font-size: 2rem;
+    color:#ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+  
+  /* Footer Styles */
+  footer {
+    font-size: 1rem;
     text-align: center;
     padding: 1.5rem;
     background-color: var(--background-dark);
-    font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
-}
-
-/* Responsive Breakpoints */
-@media screen and (max-width: 768px) {
+  }
+  
+  /* Responsive Breakpoints */
+  @media screen and (max-width: 768px) {
     .hamburger-menu {
-        display: flex; /* Show hamburger menu */
-    }
-    
-    .hamburger-line {
-      background-color: var(--accent-pink); /* Change to pink */
-      width: 25px;
-      height: 3px;
-      margin: 3px 0;
-      transition: 0.4s;
-    }
-    .nav-links {
-        /* Hide navigation by default on mobile */
-        display: none;
-        position: absolute;
-        top: 100%; /* Position below the navbar */
-        left: 0;
-        width: 100%;
-        background-color: var(--background-dark);
+      display: flex; /* Show hamburger menu */
+  }
+  
+  .hamburger-line {
+    background-color: var(--accent-pink); /* Change to pink */
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
+    transition: 0.4s;
+  }
+  .nav-links {
+      /* Hide navigation by default on mobile */
+      display: none;
+      position: absolute;
+      top: 100%; /* Position below the navbar */
+      left: 0;
+      width: 100%;
+      background-color: var(--background-dark);
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Show navigation when 'active' class is added */
+  .nav-links.active {
+      display: flex;
+  }
+  
+  .nav-links li {
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+  }
+  
+  /* Optional: Hamburger menu animation */
+  .hamburger-menu.active .hamburger-line:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .hamburger-menu.active .hamburger-line:nth-child(2) {
+      opacity: 0;
+  }
+  
+  .hamburger-menu.active .hamburger-line:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+    .team {
         flex-direction: column;
         align-items: center;
-        padding: 1rem 0;
-        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        gap: 2rem;
     }
-    
-    /* Show navigation when 'active' class is added */
-    .nav-links.active {
-        display: flex;
-    }
-    
-    .nav-links li {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
-    }
-    
-    /* Optional: Hamburger menu animation */
-    .hamburger-menu.active .hamburger-line:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-    
-    .hamburger-menu.active .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger-menu.active .hamburger-line:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
-    }
-
-    .logo {
-        flex-direction: row;
+  
+    .team-contact {
+        flex-direction: column;
         align-items: center;
+        gap: 2rem;
     }
-
+  
+    .m1, .con {
+        flex: none;
+        width: 100%;
+        margin-top: 0;
+    }
+  
     .logo-img {
-        width: 100px;
+        margin-left: 0;
     }
-
-    main {
-        padding: 1rem;
-    }
-
-    .content {
-        width: 95%;
-        padding: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .content h1 {
-        font-size: 2rem;
-    }
-
-    .content p {
+  }
+  
+  @media screen and (max-width: 480px) {
+    h4 {
         font-size: 1rem;
     }
-}
-
-/* Accessibility and Performance Enhancements */
-img {
+  
+    p {
+        font-size: 0.9rem;
+    }
+  }
+  
+  /* Accessibility and Performance Enhancements */
+  img {
     max-width: 100%;
     height: auto;
+  }
+  
+  a, button {
+    transition: all 0.3s ease;
+  }
+
+
+  @media (max-width: 550px) {
+    
+  .container {
+    max-width: 400px;
+    font-size: 1rem;
+}
+.contact div {
+    font-family: "Young Serif", serif;
+    font-size: 1.5rem;
+    color:#ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+  .heading {
+    font-family: "Young Serif", serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-left:10%;
+    margin-bottom: 2px;
 }
 
-a, button {
-    transition: all 0.3s ease;
+.header {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.header .event-info {
+text-align: left;
+}
+
+.header .event-info span {
+display: block;
+font-size: 0.8rem;
+color: #ccc;
+}
+
+  
 }
